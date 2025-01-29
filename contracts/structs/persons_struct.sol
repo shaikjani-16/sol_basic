@@ -3,6 +3,7 @@
 pragma solidity ^0.8.0;
 
 contract PersonsContract{
+    
     struct Person{
         string name;
         uint age;
@@ -10,6 +11,7 @@ contract PersonsContract{
     }
     mapping(address=>Person) public persons;
     function setPerson(string memory _name,uint _age) public {
+            
         persons[msg.sender]=Person({
             name:_name,
             age:_age,
