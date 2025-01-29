@@ -9,7 +9,12 @@ contract modifiers{
     }
     modifier isOwner(){
         require(msg.sender==owner,"unauthorized");
-        _;
+        _; // function will be executed after require
+
+    }
+    modifier isOwner1(){
+        _; // function wiil be executed before require
+        require(msg.sender==owner,"unauthorozed");
     }
         function test_modifier()  isOwner public  view  returns(address)   {
             return msg.sender;
