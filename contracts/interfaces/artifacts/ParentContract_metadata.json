@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_contractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getMessageFromOtherContract",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "newMessage",
+						"type": "string"
+					}
+				],
+				"name": "setMessageFromOtherContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interfaces/interface_exa.sol": "ParentContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interfaces/interface_exa.sol": {
+			"keccak256": "0x8d56a67b64902e58168dd260b7272746d943fdadca6bec433d1808f1b0ac793a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://298cc3f872999ec9dbae731a6713ad350998ef175f7e9b0121e10034f0a52876",
+				"dweb:/ipfs/Qmf6xY2uDd3khRaosTzbZ7Vgyo67Me6mrf18wo8Kdtbiu8"
+			]
+		}
+	},
+	"version": 1
+}
