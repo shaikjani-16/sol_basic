@@ -13,6 +13,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_noOfTokens",
 						"type": "uint256"
@@ -27,19 +46,6 @@
 					}
 				],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -95,7 +101,7 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address payable",
+						"internalType": "address",
 						"name": "_toAddress",
 						"type": "address"
 					},
@@ -145,11 +151,11 @@
 	},
 	"sources": {
 		"contracts/Creating_Token-ERC20/token_mint.sol": {
-			"keccak256": "0x8addef256b591879b92ff460398b6416b85cc76d3c7877edf04594fbf62d4746",
+			"keccak256": "0xa888f04fc8293c42f0f6773c3e6e06485c4e8a8353f46884f7f162342d0ae70a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3d7171c3b607fef112c11b58d1f659e1973786ab4fc655d43611c29be970891b",
-				"dweb:/ipfs/QmacBiHn8jfHe4iVYpAw8zhjh2kxzw8c3D6VWgcJCv69mT"
+				"bzz-raw://8ac5d5c765b41826c83c9a86cdb3319935c8cdb1d8ebd3f8a5577f976bcd86a4",
+				"dweb:/ipfs/QmcYRNBfarTQHRWZvSoV2cUvNwX3p3TmoKd63Gw8AVkcwW"
 			]
 		}
 	},
