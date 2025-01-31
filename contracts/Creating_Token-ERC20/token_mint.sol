@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 
 contract CreateToken {
     address public owner;
-    mapping(address => uint) private balances;
+    mapping(address => uint) public balances;
     uint public supply = 0;
-
+    mapping(address=>mapping(address=>uint)) public allowances;
     constructor() {
         owner = msg.sender;
     }
@@ -40,4 +40,37 @@ contract CreateToken {
         }
         return "Successfully transferred";
     }
+
+    // allowances
+    // allows the token holder to grant permission to another address to use the certain amount of tokens
+    event TransferFrom(address indexed _from, address indexed _to,uint256 _value);
+    event allowanceEvent(address _owner, address _spender,uint256 _amount);
+    function approve(address _spender, uint256 _value) public returns (bool success){
+        allowances[msg.sender][_spender]=_value;
+        return success;        
+    }
+    // remaining allowance 
+    function allowance(address _owner, address _spender) public  returns (uint256 remaining){
+        emit allowanceEvent(_owner,_spender,allowances[_owner][_spender]);
+        return allowances[_owner][_spender];
+    }
+    // transfer from allowanced token
+    // i want to send the allowanced token to another address;
+    // from the issuer (original owner) to another address via me.
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success){
+        require(allowances[_from][msg.sender]>=_value,"Insufficient Allowence");
+        uint balance = balances[_from];
+        require(balance>=_value,"Insufficient balance from allowance");
+        balances[_from]-=_value;
+        balances[_to]+=_value;
+        allowances[_from][msg.sender]-=_value;
+        emit TransferFrom(_from, _to, _value);
+        return success;
+        }
+
+
+
+
+
+
 }
